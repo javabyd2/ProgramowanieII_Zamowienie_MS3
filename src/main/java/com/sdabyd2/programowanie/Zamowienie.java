@@ -31,7 +31,7 @@ public class Zamowienie {
 
     public void dodajPozycje(Pozycja p) {
 
-        
+
         Pozycja poz = pozycja.stream().filter(o -> o.getNazwaTowaru().equals(p.nazwaTowaru)).collect(Collectors.toList());
 
         if(pozycja.contains(p.nazwaTowaru)){
