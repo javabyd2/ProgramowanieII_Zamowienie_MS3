@@ -9,11 +9,21 @@ public class Main {
 
         Pozycja pozycja1 = new Pozycja("Chleb", 1, 3.5);
         System.out.println(pozycja1);
-        Pozycja pozycja2 = new Pozycja("Cukier", 3, 4);
+        Pozycja pozycja2 = new Pozycja("Cukier", 3, 4.5);
         System.out.println(pozycja2);
+        Pozycja pozycja3 = new Pozycja("mleko",2,2.25);
+        System.out.println(pozycja3);
+        Pozycja pozycja4 = new Pozycja("Chleb",1,3.5);
+        System.out.println(pozycja4);
+
+
         Zamowienie zamowienie = new Zamowienie(3);
         zamowienie.dodajPozycje(pozycja1);
         zamowienie.dodajPozycje(pozycja2);
+        zamowienie.dodajPozycje(pozycja3);
+        zamowienie.dodajPozycje(pozycja4);
+        zamowienie.usunPozycje(1);
+        zamowienie.edytujPozycje(1,2,4,"jogurt");
         System.out.println(zamowienie);
 
     }

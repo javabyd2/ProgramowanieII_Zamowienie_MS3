@@ -13,6 +13,30 @@ public class Pozycja {
         this.cena = cena;
     }
 
+    public String getNazwaTowaru() {
+        return nazwaTowaru;
+    }
+
+    public void setNazwaTowaru(String nazwaTowaru) {
+        this.nazwaTowaru = nazwaTowaru;
+    }
+
+    public int getIleSztuk() {
+        return ileSztuk;
+    }
+
+    public void setIleSztuk(int ileSztuk) {
+        this.ileSztuk = ileSztuk;
+    }
+
+    public double getCena() {
+        return cena;
+    }
+
+    public void setCena(double cena) {
+        this.cena = cena;
+    }
+
     public double obliczWartosc(){
 
         double wartoscZamowienia;

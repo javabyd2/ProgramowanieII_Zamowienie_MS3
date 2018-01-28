@@ -3,6 +3,7 @@ package com.sdabyd2.programowanie;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Zamowienie {
 
@@ -27,17 +28,17 @@ public class Zamowienie {
         this.ileDodanych = ileDodanych;
     }
 
+
     public void dodajPozycje(Pozycja p) {
 
-        if(pozycja.equals(p)){
+        
+        Pozycja poz = pozycja.stream().filter(o -> o.getNazwaTowaru().equals(p.nazwaTowaru)).collect(Collectors.toList());
 
-            p.ileSztuk++;
-
+        if(pozycja.contains(p.nazwaTowaru)){
+            pozycja
         }else{
             pozycja.add(p);
         }
-
-
     }
 
 
@@ -59,8 +60,10 @@ public class Zamowienie {
 
 
     public void usunPozycje(int indeks) {
-        pozycja.remove(pozycja.get(indeks));
+        pozycja.remove(indeks);
     }
+
+
 
     void edytujPozycje(int indeks,double cena,int sztuk,String nazwa ) {
 
