@@ -91,6 +91,7 @@ public class Pozycja implements Serializable {
     public void zapiszZamowienie(Zamowienie z, String nazwaPliku) {
 
         ObjectMapper mapper = new ObjectMapper();
+        
         try {
 
             File fieName = new File(nazwaPliku);
